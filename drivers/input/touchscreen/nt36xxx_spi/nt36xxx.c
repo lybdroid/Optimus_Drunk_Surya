@@ -3172,6 +3172,10 @@ static int32_t nvt_ts_resume(struct device *dev)
 	}
 #endif
 
+    //hack for aosp roms so palm rejection is off while 
+    lct_tp_set_screen_angle_callback(270);
+	set_lct_tp_palm_status(false);
+
 	return 0;
 }
 
